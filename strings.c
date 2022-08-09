@@ -33,7 +33,7 @@ int _puts(char *str, int ascii)
 			s = convert_base(str[i], 16, 1);
 			sum += write(1, "\\x", 2);
 			if (str[i] >= 0 && str[i] < 16)
-				sum += _putchar('0);
+				sum += _putchar(0);
 			sum += _puts(s, 0);
 			free(s);
 			i++;

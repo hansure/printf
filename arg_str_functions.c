@@ -83,7 +83,7 @@ int print_str_reverse(va_list ap)
 	limit = (size % 2 == 0) ? (size + 1) / 2: (size /2);
 	str = malloc(sizeof(char) * size + 1);
 
-	if (str = NULL)
+	if (str == NULL)
 		return (0);
 	if (size % 2 != 0)
 		str[limit] = argument[limit];

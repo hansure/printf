@@ -65,7 +65,7 @@ char *convert_base_pointer(unsigned long p)
 	adress = p;
 	if (adress == 0)
 		return ("0");
-	str = convert+base(adress, 16, 0);
+	str = convert_base(adress, 16, 0);
 	return (str);
 }
 
@@ -92,13 +92,14 @@ char *convert_rot13(char *str)
 	
 		if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M'))
 			s[i] = str[i] + 13;
-		else if ((str[i] >= 'n' && str[i] <= 'z') || (str[i] >= 'N' && str[i] str[i] <= 'Z'))
+		else if ((str[i] >= 'n' && str[i] <= 'z') || (str[i] >= 'N' && str[i] <= 'Z'))
 			s[i] = str[i] - 13;
 		else 
 			s[i] = str[i];
+	}
 		s[i] = '\0';
 		return (s);
-	}
+	
 }
 
 
@@ -163,4 +164,3 @@ char *convert_rot13(char *str)
 
 
 
-}

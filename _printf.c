@@ -40,7 +40,7 @@ int (*get_op(const char c))(va_list)
 		}
 		i++;
 	}
-	return (NULL):
+	return (NULL);
 
 }
 
